@@ -940,19 +940,19 @@ max-width: 700px;
 
 }
 .hero-content2 h1 {
-font-size: 2.2rem; /* Adjust font size as needed */
+font-size: 2.2rem; Adjust font size as needed
 margin-bottom: 15px;
 color: #53131E;
 font-weight: bold;
 font-family: 'Figtree', sans-serif;
 }
-
+*/
 .hero-content2 p {
-font-size: 1rem; /* Adjust font size as needed */
+font-size: 1rem; 
 line-height: 1.6;
 margin-bottom: 25px;
 font-family: 'Figtree', sans-serif;
-} */
+} 
 
 .hero-buttons2 {
 display: flex;
