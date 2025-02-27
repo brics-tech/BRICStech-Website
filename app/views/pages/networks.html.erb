@@ -1,0 +1,766 @@
+<style>
+
+.fix-navbar {
+  display: inline-flex !important;
+  align-items: center;
+  font-weight: bold;
+  text-decoration: none; 
+  pointer-events: auto !important;
+  cursor: pointer !important;
+  
+}
+
+
+.navbar-brand {
+
+  display: inline-flex !important;
+  align-items: center;
+  font-weight: bold;
+  text-decoration: none; 
+  pointer-events: auto !important;
+  cursor: pointer !important;
+}
+
+
+.fix-navbar  img {
+  margin-right: 10px;
+  width: 100px;
+  height: auto;
+}
+
+.fix-nav .nav-link {
+  padding: 8px 15px;
+  color: #19180A;
+  font-family: 'Figtree', sans-serif;
+}
+
+.fix-nav .dropdown-item {
+  color: #333;
+  font-family: 'Figtree' , sans-serif ;
+}
+
+.btn {
+  padding: 8px 15px;
+  font-size: 13px;
+  font-family: 'Figtree' , sans-serif;
+}
+
+/* Center the navbar content */
+.container-fluid {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.fix-collapse {
+  justify-content: center;
+  flex-grow: 0;
+}
+
+.fix-nav {
+  margin: 0 auto;
+}
+
+.fix-nav .nav-item {
+  margin: 0 5px;
+  
+}
+.d-flex {
+  gap: 10px;
+}
+
+/* Dropdown Styling */
+.dropdown-menu {
+  border: none;
+}
+
+.dropdown-item:hover {
+  background-color: #f0f0f0;
+}
+
+/* Rounded, Dark Blue Buttons */
+.btn-rounded {
+  border-radius: 20px;
+  color: white !important;
+  padding: 8px 20px;
+  text-decoration: none;
+}
+
+.btn-dark-blue {
+  background-color: #226F54;
+  border-color: #226F54 !important;
+  font-size:14px;
+  font-family: 'Figtree' , sans-serif;
+}
+.btn-dark-blue2 {
+  background-color: #A30000;
+  border-color: #A30000 !important;
+  font-family: 'Figtree' , sans-serif;
+  font-size:14px;
+}
+
+.btn-dark-blue:hover { /* Hover color for book a demo button */ 
+  background-color: #226F54 !important; 
+  border-color: #226F54 !important; 
+}
+
+.btn-dark-blue2:hover {  /* Hover color for sign up and login buttons */ 
+  background-color: #A30000 !important; 
+  border-color: #A30000 !important; 
+}
+
+.btn-outline-dark-red { /*  the color of outline buttons */ 
+  color: #19180A !important; 
+  border-color: #FFFFF2 !important;
+  border-radius: 20px;
+  font-size:15px;
+  border:2px solid #19180A !important; 
+  font-family: 'Figtree', sans-serif;
+  width:120px;
+  height:40px;
+
+}
+
+.btn-outline-dark-red :hover { /*  the hover color of outline buttons */ 
+  background-color: white;
+  color: white;
+  border-color: #19180A !important;
+}
+
+.btn-filled-dark-red { /*  the color of outline buttons */ 
+color: white; 
+background-color:#A30000 !important;
+border-color: #A30000 !important;
+border-radius: 20px;
+font-size:15px;
+font-family: 'Figtree' , sans-serif;
+width:120px !important;
+height:30px !important;
+}
+
+.btn-filled-dark-red:hover { /*  the hover color of outline buttons */ 
+background-color: white;
+color: white;
+border-color: #A30000 !important;
+}
+
+
+.btn-filled-dark-red svg {
+  width: 10px; /* Adjust size as needed */
+  height: 10px; /* Adjust size as needed */
+}
+
+.btn-filled-dark-red:hover svg path {
+  fill: white; /* Arrow color on hover */
+}
+ 
+
+
+.btn-outline-dark-red svg {
+  width: 10px; /* Adjust size as needed */
+  height: 10px; /* Adjust size as needed */
+}
+
+.btn-outline-dark-red:hover svg path {
+  fill: #53131E; /* Arrow color on hover */
+}
+
+
+
+
+
+
+.btn-white-filled-dark-red { 
+color: #19180A !important; 
+# color:black;
+background-color: #FFFFF2 !important;
+border-color: #53131E !important;
+
+border-radius: 20px;
+font-size:15px;
+font-family: 'Figtree' , sans-serif;
+}
+
+.btn-white-filled-dark-red:hover { 
+background-color: white;
+color: #19180A;
+# border-color: #53131E !important;
+}
+
+/* Horizontal Dropdown Menu Styling */
+.fix-nav.horizontal-dropdown {
+  display: flex;
+  justify-content: center;
+  list-style: none; /* Remove bullet points */
+}
+
+.fix-nav.horizontal-dropdown .nav-item {
+  position: relative;
+
+}
+
+.fix-nav.horizontal-dropdown .dropdown-toggle {
+  padding: 8px 15px;
+  text-decoration: none; /* Remove underlines */
+}
+
+
+
+
+
+.fix-nav.horizontal-dropdown .dropdown-menu {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: white;
+  border: none;
+  /* box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); */
+  z-index: 1000;
+  min-width: 100%;
+  text-align: left;
+  list-style: none; /* Remove bullet points from dropdown */
+  padding: 0; /* Remove default padding from dropdown list */
+}
+
+.fix-nav.horizontal-dropdown .dropdown-item {
+  padding: 8px 15px;
+  color: #226F54;
+  display: block;
+  clear: both;
+  white-space: nowrap;
+  font-size: 13px; 
+  text-decoration: none; /* Remove underlines from dropdown items */
+  font-family: 'Figtree', sans-serif;
+}
+
+.fix-nav.horizontal-dropdown .nav-item:hover .dropdown-menu,
+.fix-nav.horizontal-dropdown .nav-item .dropdown-menu:hover {
+  display: block;
+}
+
+/* Remove line from first word next to logo */
+.fix-nav.horizontal-dropdown .nav-item:first-child .nav-link {
+  border-left: none; /* Remove left border */
+}
+
+.fix-navbar .brand-text { /* New style for the text */
+  color: #53131E; 
+  font-size: 24px; /* Increased font size (adjust as needed) */
+  text-decoration: none; /* Remove underline */
+  margin-left: 0px; /* Add some space between logo and text */
+  font-family: 'Ador Hairline Bold', serif;
+  font-weight: bold;
+
+}
+
+
+
+
+
+
+
+
+
+
+
+.home-section {
+padding-bottom:20px;
+padding-top:10px;
+
+}
+
+.home-content {
+display: flex;
+align-items: flex-start; /* Key change: Align items to the top */
+max-width: 1200px;
+margin: 0 auto;
+
+}
+
+.home-text {
+flex: 1; /* Allow text to take up available space */
+font-family: 'Figtree', sans-serif;
+padding-right:90px;
+
+}
+
+.home-text h1 {
+font-size: 40px; /* Adjust as needed */
+margin-bottom: 10px;
+color: #A30000;
+font-weight: bold;
+font-family: 'Figtree' , sans-serif;
+}
+.home-text2 {
+flex: 1; /* Allow text to take up available space */
+font-family: 'Figtree', sans-serif;
+padding-right:150px;
+
+}
+
+.home-text2 h1 {
+font-size: 25px; /* Adjust as needed */
+margin-bottom: 20px;
+color: #53131E;
+font-weight: bold;
+font-family: 'Figtree' , sans-serif;
+}
+
+.home-text2 p {
+margin-bottom: 10px;
+font-family: 'Figtree' , sans-serif;
+font-size: 1.2rem; /* Adjust as needed */
+color:#19180A;
+}
+.sub-text {
+margin-bottom: 10px;
+font-family: 'Figtree', sans-serif;
+}
+
+
+.home-text p {
+font-size: 1.2rem; /* Adjust as needed */
+line-height: 1.6; /* Improve readability */
+margin-bottom: 40px;
+color:#19180A;
+font-family: 'Figtree', sans-serif;
+}
+
+.home-buttons {
+display: flex;
+gap: 10px;
+}
+
+.home-image {
+flex: 1; /* Allow image to take up available space */
+padding-bottom:30px;
+width:10px ;
+height: 50px;
+padding-left:90px;
+}
+
+.home-image img {
+width: 450px  ; /* Image will be 80% of its container s width */
+height: 450px;
+padding-bottom:10px;
+margin-bottom: 10px;
+border-radius: 0 !important;
+}
+
+.contact-button {
+color: #051C38 !important; /* Dark blue color */
+}
+
+
+
+
+
+
+
+
+.container {
+ display: flex;
+  max-width: 1200px; /* Adjust as needed */
+  /* margin: 0 auto; */
+  margin-left: 80px;
+ 
+}
+
+.left-section {
+  flex: 2; /* Make left section wider */
+  padding: 2px;
+  box-sizing: border-box;
+  margin-right:60px;
+  width:900px;
+}
+
+.right-section {
+  /* width:500px; */
+  padding: 2px;
+  /* box-sizing: border-box;
+  /* display: grid; */
+  grid-template-columns: 1fr; */
+  gap: 5px;
+  /* width:400px; */
+}
+
+.left-section h1 {
+  font-size: 2.5em;
+  margin-bottom: 20px;
+}
+
+.left-section h2 {
+  font-size: 1.8em;
+  margin-bottom: 15px;
+}
+
+.left-section p {
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
+
+.getting-started {
+  color: #888;
+ 
+}
+
+
+.image-container{ 
+ border-radius:20px;
+  height: 130px;  
+   display: flex; 
+   width:200px;
+   margin-top:10px;
+ justify-content: center;
+  align-items: center; 
+} 
+
+.box-content {
+  padding-left: 10px; /* Adjusted padding */
+}
+
+.box-button {
+  background-color: #FFFFF2;
+  border: 1px solid black;
+  padding: 8px 16px;
+  border-radius: 20px;
+  margin-bottom: 10px;
+  cursor: pointer;
+  font-size: 0.9em;
+    margin-top:10px;
+  
+}
+
+.box-text {
+  grid-column: 2; /* Place in the second column */
+ /* Allow auto placement */
+  line-height: 1.6;
+}
+
+.rowdisplay {
+  display: flex;
+   justify-content: row; 
+}
+
+
+
+
+
+
+
+.expect-section {
+  font-family: sans-serif; /* Adjust font as needed */
+  background-color: #f8f8f2; /* Light background */
+  padding: 40px;
+  max-width: 800px; /* Adjust as needed */
+  margin: 0 auto;
+}
+
+.expect-section h2 {
+  font-size: 2.5em; /* Adjust as needed */
+  margin-bottom: 30px;
+  color: #333;
+}
+
+.expect-item {
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: 5px;
+}
+
+.checkmark {
+  font-size: 1.5em; /* Adjust as needed */
+  color: black; /* Green color */
+  margin-right: 2px;
+  line-height: 1;
+}
+
+.expect-item h3 {
+  font-size: 1.2em; /* Adjust as needed */
+  
+  color: black;
+}
+
+.expect-item p {
+  color: #666;
+  line-height: 1.6;
+}
+
+.expect-item > div {
+  flex: 1;
+}
+
+
+
+
+.card-section {
+  display: flex;
+  justify-content: center; /* Center the cards horizontally */
+  gap: 20px; /* Space between cards */
+  padding: 40px; /* Add padding to the section */
+  font-family: sans-serif; /* Adjust font as needed */
+}
+
+.card {
+  border: 1px solid black; /* Light border */
+  border-radius: 10px; /* Rounded corners */
+  padding: 30px; /* Padding inside the cards */
+  width: 500px; /* Set a fixed width for the cards */
+background-color:#FFFFF2;
+  text-align: left; /* Align text to the left */
+  height:400px;
+}
+
+.card h2 {
+  font-size: 1.5em; /* Adjust heading size */
+  color: #53131E; /* Brown color for headings */
+  margin-bottom: 20px;
+  font-weight:bold;
+}
+
+.card p {
+  line-height: 1.6; /* Adjust line height for readability */
+  color: black; /* Dark gray color for paragraphs */
+  margin-bottom: 15px; /* Spacing between paragraphs */
+  font-size:18px;
+}
+.logo-container {
+margin-bottom: 10px;
+padding-top:1px;
+}
+
+.logo-container img {
+max-width: 130px !important; /* Adjust logo size as needed */
+# height: 153px;
+padding-top:1px;
+}
+
+</style>
+
+
+
+
+<nav class="navbar navbar-expand-lg navbar-light" data-turbo-permanent>
+<div class="container-fluid">
+  <%= link_to root_path, class: "fix-navbar" do %>
+
+    <img style="width:150px;" src="<%= asset_path 'logo2.png' %>" alt="BRICStech Logo">
+    <span class="brand-text" style="font-size:40px;" >BRICStech</span>
+<% end %>
+
+
+  <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
+    <ul class="navbar-nav mx-auto horizontal-dropdown">
+      <%= render partial: 'shared/nav_links' %>
+    </ul>
+  </div>
+
+
+
+  <div class="d-flex">
+    <a href="#" class="btn btn-dark-blue btn-rounded me-2">Book a Demo</a>
+   
+    <a href="<%= login_path %>" class="btn btn-dark-blue2 btn-rounded me-2">Log In</a>
+  </div>
+</div>
+</nav>
+
+
+<div class="home-section">
+<div class="home-content">
+<div class="home-text">
+<div class="sub-text">
+
+<h2 style="font-size:45px; color:#A30000; padding-bottom:10px;">Make Us Your Partner In Growth</h2>
+   <p style="font-size:19px;">We’re always looking for like-minded partners to collaborate with. 
+   Our growing network  <br> brings together skilled developers, 
+   agile teams and industry experts.
+   
+   </p>
+</div>
+</div>
+</div>
+</div>
+
+
+
+<div class="container">
+  <div class="left-section">
+    <div class="header">
+      <p class="getting-started" style="color:#A30000">Getting Started</p>
+      <h1 style="color:#53131E; font-size: 30px; font-weight:bold;">How can I be a BRICStech Partner?</h1>
+    </div>
+    <div class="content">
+      <p style="font-size:20px">The   BRICStech    Collective   is   our   exclusive partnership program, uniting developers, freelancers, university students, and teams in a shared mission to innovate, collaborate, and create impactful technology solutions.</p>
+      <p style="font-size:20px">By joining, you gain access to cutting-edge technologies, a transparent royalty model, and an opportunity to co-own the success of your contributions.</p>
+    </div>
+    <div class="subheader">
+      <h2 style="color:#53131E; font-size: 30px; font-weight:bold;">Who Can Apply?</h2>
+      <p style="font-size:20px">Whether you're an independent developer, part of a university team, an established company, or a recent graduate. We're open to exploring how we can collaborate.</p>
+    </div>
+  </div>
+
+  <div class="right-section">
+
+<div class="rowdisplay">
+     <div class="image-container" style="margin-top:40px; margin-bottom:20px;">
+         <%= image_tag "place.png", alt: "Timesheets Pro" %>
+        </div>
+      <div class="box-content">
+        <button class="box-button" style="margin-top:40px;">Apply</button>
+        <p style="font-size:18px;">Complete a quick <br>application  on by signing up.</p>
+  </div>
+</div>
+      
+      <div class="rowdisplay">
+     <div class="image-container" style="margin-bottom:20px;">
+         <%= image_tag "place.png", alt: "Timesheets Pro" %>
+        </div>
+      <div class="box-content">
+        <button class="box-button">Connect</button>
+        <p style="font-size:18px;">Connect with our<br> Partnership team.</p>
+  </div>
+</div>
+
+      <div class="rowdisplay">
+     <div class="image-container" style="margin-bottom:20px;">
+         <%= image_tag "place.png", alt: "Timesheets Pro" %>
+        </div>
+      <div class="box-content">
+        <button class="box-button">Onboard</button>
+        <p style="font-size:18px;">Gain access to the <br> BRICStech Partners Portal.</p>
+  </div>
+</div>
+
+
+      <div class="rowdisplay">
+     <div class="image-container" style="margin-bottom:20px;">
+         <%= image_tag "place.png", alt: "Timesheets Pro" %>
+        </div>
+      <div class="box-content">
+        <button class="box-button">Collab & Earn</button>
+        <p style="font-size:18px;"> Build products with a <br>team and generate royalties.</p>
+  </div>
+</div>
+  </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="home-section">
+<div class="home-content">
+<div class="home-text">
+<div class="sub-text">
+
+<h2 style="font-size:25px; color:#53131E; padding-bottom:10px;">What to Expect?</h2>
+
+  <div class="expect-item">
+    <span class="checkmark">✓</span>
+    <h3 style="font-weight:bold;">All-in-One Partner Portal</h3> 
+   
+  </div>
+   <div class="expect-item">
+    <p style="color:black"> Access everything you need in one place.</p>
+     </div>
+  <div class="expect-item">
+    <span class="checkmark">✓</span>
+    <h3 style="font-weight:bold;">Personal Dashboard</h3>
+    
+  </div>
+
+   <div class="expect-item">
+    <p style="color:black">Track your progress, projects, and earnings effortlessly.</p>
+     </div>
+  <div class="expect-item">
+    <span class="checkmark">✓</span>
+    <h3 style="font-weight:bold;">Royalty Dashboard</h3>
+  </div>
+
+    <div class="expect-item">
+    <p style="color:black">Monitor your revenue, tier progression, and payments in real-time.</p>
+     </div>
+
+  <div class="expect-item">
+    <span class="checkmark">✓</span>
+    <h3 style="font-weight:bold;">Project Management App</h3>
+   
+  </div>
+    <div class="expect-item">
+     <p style="color:black">Manage tasks, milestones, and deadlines with ease.</p>
+     </div>
+
+  <div class="expect-item">
+    <span class="checkmark">✓</span>
+    <h3 style="font-weight:bold;">Messaging & Collaboration App</h3>
+    
+  </div>
+<div class="expect-item">
+     <p style="color:black">Communicate seamlessly with teams and partners.</p>
+     </div>
+
+
+</div>
+</div>
+</div>
+</div>
+
+
+
+
+
+
+
+<div class="card-section">
+  <div class="card">
+    <h2>Training & Development</h2>
+    <p>Unlock the power of the BRICStech LAMP Stack!</p>
+    <p style="padding-top:50px;">Leverage our extensive resources to master the BRICStech LAMP Stack, our very own development framework designed for building, deploying, and scaling innovative solutions.</p>
+  </div>
+  <div class="card">
+    <h2>Support & Resources</h2>
+    <p>Staying ahead with exclusive tools to empower your team and enhance delivery.</p>
+    <p style="padding-top:50px;">Through Shared Libraries and your Partners Portal, you'll access expert strategies, best practices, and technical resources to transform projects into high-impact products.</p>
+  </div>
+  <div class="card">
+    <h2>Revenue & Growth</h2>
+    <p>Earn and grow through our Royalty Tiers, designed to reward partners fairly as they progress.</p>
+    <p style="padding-top:20px;">As you advance gain access to exclusive tools, high-profile projects, scaling your success, with real-time earnings tracked. You stay in control of your growth every step of the way.</p>
+  </div>
+</div>
+
+
+<div class="signup-section" style="padding-right:70px ;padding-top:100px; padding-bottom:150px;">
+<div class="signup-content">
+<div class="logo-container" >
+  <%= image_tag "logo2.png", alt: "BRICStech Logo" %>
+  <div class="text-container">
+  <h3>BRICStech</h3>
+</div>
+</div>
+
+<div class="text-container">
+  <h2 style="font-weight:bold;">Built by you,<br> Powered by BRICStech</h2>
+</div>
+<div class="button-container">
+<a href="#" class="btn btn-outline-dark-red btn-rounded"style="background-color:#A30000 !important; color:white !important ;  border-color: #A30000 !important;">Sign Up</a>
+</div>
+<div class="login-link-wrapper"> 
+<div class="login-link">
+  <p style="font-size:18px;">Already have an account? <a href="#">Log In.</a></p>
+  </div>
+</div>
+</div>
