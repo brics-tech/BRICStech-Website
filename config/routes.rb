@@ -7,4 +7,5 @@ Rails.application.routes.draw do
   get 'partnerlogin', to: 'sessions#partnerlogin' # About us page
   get 'innotaionlab', to: 'pages#innvotationlab' #  innvotaion lab page
   get 'solutions', to: 'pages#solutions' # Solutions page
+  get 'networks', to: 'pages#networks' # Networks page
 end
