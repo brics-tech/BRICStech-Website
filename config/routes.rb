@@ -8,4 +8,5 @@ Rails.application.routes.draw do
   get 'innotaionlab', to: 'pages#innvotationlab' #  innvotaion lab page
   get 'solutions', to: 'pages#solutions' # Solutions page
   get 'networks', to: 'pages#networks' # Networks page
+  get 'royalty', to: 'pages#royalty' # Networks page
 end

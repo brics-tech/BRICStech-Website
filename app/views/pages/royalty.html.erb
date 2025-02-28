@@ -135,7 +135,7 @@ border-radius: 20px;
 font-size:15px;
 font-family: 'Figtree' , sans-serif;
 width:120px !important;
-height:30px !important;
+height:40px !important;
 }
 
 .btn-filled-dark-red:hover { /*  the hover color of outline buttons */ 
@@ -356,97 +356,62 @@ color: #051C38 !important; /* Dark blue color */
 
 
 
-
-
-
-.container {
- display: flex;
-  max-width: 1200px; /* Adjust as needed */
-  /* margin: 0 auto; */
-  margin-left: 80px;
- 
-}
-
-.left-section {
-  flex: 2; /* Make left section wider */
-  padding: 2px;
-  box-sizing: border-box;
-  margin-right:60px;
-  width:900px;
-}
-
-.right-section {
-  /* width:500px; */
-  padding: 2px;
-  /* box-sizing: border-box;
-  /* display: grid; */
-  grid-template-columns: 1fr; */
-  gap: 5px;
-  /* width:400px; */
-}
-
-.left-section h1 {
-  font-size: 2.5em;
-  margin-bottom: 20px;
-}
-
-.left-section h2 {
-  font-size: 1.8em;
-  margin-bottom: 15px;
-}
-
-.left-section p {
-  line-height: 1.6;
-  margin-bottom: 20px;
-}
-
-.getting-started {
-  color: #888;
- 
-}
-
-
-.image-container{ 
- border-radius:20px;
-  height: 130px;  
-   display: flex; 
-   width:200px;
-   margin-top:10px;
- justify-content: center;
-  align-items: center; 
-} 
-
-.box-content {
-  padding-left: 10px; /* Adjusted padding */
-}
-
-.box-button {
+.feature-access-container {
+  display: flex;
+  justify-content: space-between; 
+  align-items: flex-start;
+  /* width:100%; */
   background-color: #FFFFF2;
-  border: 1px solid black;
-  padding: 8px 16px;
-  border-radius: 20px;
-  margin-bottom: 10px;
-  cursor: pointer;
-  font-size: 0.9em;
-    margin-top:10px;
+   /* padding-left: 70px; 
+  padding-right:70px;  */
+}
+
+.text-content {
+  flex: 1;
+  max-width: 50%;
+  padding-right: 10px;
+   font-family: 'Figtree' , sans-serif;
   
 }
 
-.box-text {
-  grid-column: 2; /* Place in the second column */
- /* Allow auto placement */
+.text-content h1 {
+  font-size: 2.5em;
+  margin-bottom: 20px;
+   font-family: 'Figtree' , sans-serif;
+}
+
+.text-content p {
+  font-size: 1.1em;
   line-height: 1.6;
+  margin-bottom: 10px;
+   font-family: 'Figtree' , sans-serif;
 }
 
-.rowdisplay {
-  display: flex;
-   justify-content: row; 
+.quote-box {
+  border: 1px solid #19180A;
+  padding: 10px;
+  border-radius: 15px;
+  margin-bottom: 10px;
+  width:560px;
+  font-size:15px;
+  height:80px;
+}
+.image-content {
+  flex: 1;
+  max-width: 60%;
+  /* border-radius: 10px; */
+  overflow: hidden;
+  height:400px; 
+   padding-left: 220px; 
 }
 
-
-
-
-
+.image-content img {
+  width: 100%;
+  display: block;
+  height: 100%;
+  object-fit: cover;
+   border-radius: 10px;
+} 
 
 
 .expect-section {
@@ -477,64 +442,138 @@ color: #051C38 !important; /* Dark blue color */
 }
 
 .expect-item h3 {
+
   font-size: 1.2em; /* Adjust as needed */
-  
-  color: black;
+  color: #A30000;
+  padding-bottom:20px;
 }
 
 .expect-item p {
-  color: #666;
+  color: black;
   line-height: 1.6;
+  font-size: 1.2em; /* Adjust as needed */
+  padding-bottom:35px;
 }
 
 .expect-item > div {
   flex: 1;
 }
 
+.image-container {
+  position: relative; /* Needed for absolute positioning of the text */
+  display: inline-block; /* Or block, depending on your layout */
+  width: 40%; /* Ensures image fills the container */
+  height: 600px; /* Maintains aspect ratio */
+  border-radius: 20px;
 
+}
 
+.image-container img {
+  display: block; /* Prevents a small gap below the image */
+  width: 100%; /* Ensures image fills the container */
+  height: 700px; /* Maintains aspect ratio */
+  border-radius: 20px;
+}
 
-.card-section {
+.text-overlay {
+  position: absolute; /* Positions the text over the image */
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
   display: flex;
-  justify-content: center; /* Center the cards horizontally */
-  gap: 20px; /* Space between cards */
-  padding: 40px; /* Add padding to the section */
-  font-family: sans-serif; /* Adjust font as needed */
+  flex-direction: column; /* Arranges words vertically */
+  justify-content: center; /* Vertically centers the words */
+  align-items: start; /* Horizontally centers the words */
+  pointer-events: none; /* Allows clicks to pass through to the image */
 }
 
-.card {
-  border: 1px solid black; /* Light border */
-  border-radius: 10px; /* Rounded corners */
-  padding: 30px; /* Padding inside the cards */
-  width: 500px; /* Set a fixed width for the cards */
-background-color:#FFFFF2;
-  text-align: left; /* Align text to the left */
-  height:400px;
-}
-
-.card h2 {
-  font-size: 1.5em; /* Adjust heading size */
-  color: #53131E; /* Brown color for headings */
-  margin-bottom: 20px;
+.word1 {
+  font-family: 'Figtree', sans-serif;
+  font-size: 2em; /* Adjust font size as needed */
+  color: #226F54; /* Text color */
+  text-align: start; /* Centers text within each word container */
+  margin: 0.1em 0; /* Adjust spacing between words */
+  padding-top:370px;
+  padding-left:40px;
   font-weight:bold;
 }
 
-.card p {
-  line-height: 1.6; /* Adjust line height for readability */
-  color: black; /* Dark gray color for paragraphs */
-  margin-bottom: 15px; /* Spacing between paragraphs */
-  font-size:18px;
-}
-.logo-container {
-margin-bottom: 10px;
-padding-top:1px;
+.word2 {
+  font-family: 'Figtree', sans-serif;
+  font-size: 2em; /* Adjust font size as needed */
+  color: #A30000; /* Text color */
+  text-align: start; /* Centers text within each word container */
+  margin: 0.1em 0; /* Adjust spacing between words */
+  padding-left:40px;
+  font-weight:bold;
 }
 
-.logo-container img {
-max-width: 130px !important; /* Adjust logo size as needed */
-# height: 153px;
-padding-top:1px;
+.word3 {
+  font-family: 'Figtree', sans-serif;
+  font-size: 2em; /* Adjust font size as needed */
+  color: #19180A; /* Text color */
+  text-align: start; /* Centers text within each word container */
+  margin: 0.1em 0; /* Adjust spacing between words */
+  padding-left:40px;
+  font-weight:bold;
 }
+
+
+.tier-section {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  padding: 10px;
+  font-family:'Figtree',  sans-serif;
+  padding-left:50px;
+  padding-right:50px;
+}
+
+.tier-image-container {
+  position: relative; /* Needed for absolute positioning */
+  width: 450px; /* Match the original card width */
+  height: 350px; /* Adjust as needed */
+  border-radius: 20px;
+  overflow: hidden; /* Clip content outside the container */
+}
+
+.tier-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Ensure image covers the container */
+  border-radius: 20px;
+}
+
+.tier-button {
+  position: absolute; /* Position button inside the image */
+  top: 250px;
+  left: 10%;
+ color:#53131E;
+  border: 1px solid #19180A;
+  padding: 8px 16px;
+  border-radius: 20px;
+  cursor: pointer;
+  font-size: 0.9em;
+  
+  
+}
+
+.tier-text {
+  
+  position: absolute; /* Position button inside the image */
+  top: 300px;
+  left: 10%;
+ 
+
+  color: #19180A;
+  line-height: 1.6;
+  text-align: start;
+  
+}
+
+
+
 
 </style>
 
@@ -575,89 +614,55 @@ padding-top:1px;
 <div class="home-text">
 <div class="sub-text">
 
-<h2 style="font-size:45px; color:#A30000; padding-bottom:10px;">Make Us Your Partner In Growth</h2>
-   <p style="font-size:19px;">We’re always looking for like-minded partners to collaborate with. 
-   Our growing network  <br> brings together skilled developers, 
-   agile teams and industry experts.
+<h2 style="font-size:45px; color:#A30000; padding-bottom:10px;">We’re on a Mission to Revolutionize How Developers Grow</h2>
+  
+</div>
+</div>
+</div>
+</div>
+
+<div class="home-section">
+<div class="home-content">
+<div class="home-text">
+<div class="sub-text">
+
+<div class="feature-access-container">
+  <div class="text-content">
+    <p style="font-size:20px;"> Our competitive royalty model lets you earn more for doing what you love,
+     developing cutting-edge technologies & solutions!</p>
+    
    
-   </p>
-</div>
-</div>
-</div>
-</div>
-
-
-
-<div class="container">
-  <div class="left-section">
-    <div class="header">
-      <p class="getting-started" style="color:#A30000">Getting Started</p>
-      <h1 style="color:#53131E; font-size: 30px; font-weight:bold;">How can I be a BRICStech Partner?</h1>
-    </div>
-    <div class="content">
-      <p style="font-size:20px">The   BRICStech    Collective   is   our   exclusive partnership program, uniting developers, freelancers, university students, and teams in a shared mission to innovate, collaborate, and create impactful technology solutions.</p>
-      <p style="font-size:20px">By joining, you gain access to cutting-edge technologies, a transparent royalty model, and an opportunity to co-own the success of your contributions.</p>
-    </div>
-    <div class="subheader">
-      <h2 style="color:#53131E; font-size: 30px; font-weight:bold;">Who Can Apply?</h2>
-      <p style="font-size:20px">Whether you're an independent developer, part of a university team, an established company, or a recent graduate. We're open to exploring how we can collaborate.</p>
-    </div>
+    <a href="#" class="btn btn-filled-dark-red btn-rounded  " style="border:1px solid #A30000; !important; margin-top:10px;">Learn More</a>
   </div>
-
-  <div class="right-section">
-
-<div class="rowdisplay">
-     <div class="image-container" style="margin-top:40px; margin-bottom:20px;">
-         <%= image_tag "place.png", alt: "Timesheets Pro" %>
-        </div>
-      <div class="box-content">
-        <button class="box-button" style="margin-top:40px;">Apply</button>
-        <p style="font-size:18px;">Complete a quick <br>application  on by signing up.</p>
+  <div class="image-content" >
+   
+       <%= image_tag "place.png", alt: "Shift Manager" %>
   </div>
+  
+</div></div>
 </div>
-      
-      <div class="rowdisplay">
-     <div class="image-container" style="margin-bottom:20px;">
-         <%= image_tag "place.png", alt: "Timesheets Pro" %>
-        </div>
-      <div class="box-content">
-        <button class="box-button">Connect</button>
-        <p style="font-size:18px;">Connect with our<br> Partnership team.</p>
-  </div>
 </div>
-
-      <div class="rowdisplay">
-     <div class="image-container" style="margin-bottom:20px;">
-         <%= image_tag "place.png", alt: "Timesheets Pro" %>
-        </div>
-      <div class="box-content">
-        <button class="box-button">Onboard</button>
-        <p style="font-size:18px;">Gain access to the <br> BRICStech Partners Portal.</p>
-  </div>
 </div>
 
 
-      <div class="rowdisplay">
-     <div class="image-container" style="margin-bottom:20px;">
-         <%= image_tag "place.png", alt: "Timesheets Pro" %>
-        </div>
-      <div class="box-content">
-        <button class="box-button">Collab & Earn</button>
-        <p style="font-size:18px;"> Build products with a <br>team and generate royalties.</p>
-  </div>
+<div class="home-section">
+<div class="home-content">
+<div class="home-text2">
+<div class="sub-text">
+
+<h2 style="font-size:30px; color:#53131E; padding-bottom:10px;   ">Understanding Our Royalty Tiers Model</h2>
+
+<p> At BRICStech, we believe in rewarding innovation, collaboration, and  <br>expertise, our Royalty Tiers are designed
+ to ensure that partners are fairly<br> compensated based on 3 leveled tiers, project impact, and client success rate.
+</p>
+<h2 style="font-size:30px; color:#53131E; padding-bottom:10px; padding-top:20px;  " > How It Works</h2>
 </div>
-  </div>
+
+
 </div>
-
-
-
-
-
-
-
-
-
-
+</div>
+</div>
+</div>
 
 
 
@@ -666,53 +671,78 @@ padding-top:1px;
 <div class="home-text">
 <div class="sub-text">
 
-<h2 style="font-size:25px; color:#53131E; padding-bottom:10px;">What to Expect?</h2>
+<div class="feature-access-container">
+  <div class="text-content">
 
-  <div class="expect-item">
+   
+ <div class="expect-item">
     <span class="checkmark">✓</span>
-    <h3 style="font-weight:bold;">All-in-One Partner Portal</h3> 
+    <h3 style="font-weight:bold;">Earn Royalties on Every Product Launched
+</h3> 
    
   </div>
    <div class="expect-item">
-    <p style="color:black"> Access everything you need in one place.</p>
+    <p > Get rewarded with a share of net revenue, calculated<br> after 
+    essential costs such as software licenses, platform <br>environments, infrastructure, 
+    and development support.</p>
      </div>
 
   <div class="expect-item">
     <span class="checkmark">✓</span>
-    <h3 style="font-weight:bold;">Personal Dashboard</h3>
+    <h3 style="font-weight:bold;">Grow Through Project Success</h3>
     
   </div>
 
    <div class="expect-item">
-    <p style="color:black">Track your progress, projects, and earnings effortlessly.</p>
+    <p>The more projects you complete and the higher your 
+    client satisfaction, the higher your royalty tier. Unlocking greater earning potential, 
+    exclusive tools, and priority project access.</p>
      </div>
      
   <div class="expect-item">
     <span class="checkmark">✓</span>
-    <h3 style="font-weight:bold;">Royalty Dashboard</h3>
+    <h3 style="font-weight:bold;"> Track & Manage Earnings in Real Time</h3>
   </div>
 
     <div class="expect-item">
-    <p style="color:black">Monitor your revenue, tier progression, and payments in real-time.</p>
+    <p >Stay in control with our Royalty Dashboard, providing
+     real-time tracking of your revenue, tier progression, and earnings distribution.</p>
      </div>
-
-  <div class="expect-item">
-    <span class="checkmark">✓</span>
-    <h3 style="font-weight:bold;">Project Management App</h3>
+     
+  </div>
+  
    
-  </div>
-    <div class="expect-item">
-     <p style="color:black">Manage tasks, milestones, and deadlines with ease.</p>
-     </div>
+       <div class="image-container">
+<%= image_tag "place.png", alt: "Grey Box Image" %>
 
-  <div class="expect-item">
-    <span class="checkmark">✓</span>
-    <h3 style="font-weight:bold;">Messaging & Collaboration App</h3>
-    
+  <div class="text-overlay">
+    <div class="word1">Earn.</div>
+    <div class="word2">Grow..</div>
+    <div class="word3">Innovate..</div>
   </div>
-<div class="expect-item">
-     <p style="color:black">Communicate seamlessly with teams and partners.</p>
-     </div>
+
+</div>
+
+  
+</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="home-section">
+<div class="home-content">
+<div class="home-text2">
+<div class="sub-text">
+
+<h2 style="font-size:30px; color:#53131E; padding-bottom:10px;   ">Interested in Our Partnership for Innovators & Teams?</h2>
+
+<p> 
+Join an exclusive network of innovators and organizations. <br>
+ Collaborate, access cutting-edge resources, and grow with us.
+</p>
+
+</div>
 
 
 </div>
@@ -722,27 +752,24 @@ padding-top:1px;
 
 
 
-
-
-
-
-<div class="card-section">
-  <div class="card">
-    <h2>Training & Development</h2>
-    <p>Unlock the power of the BRICStech LAMP Stack!</p>
-    <p style="padding-top:50px;">Leverage our extensive resources to master the BRICStech LAMP Stack, our very own development framework designed for building, deploying, and scaling innovative solutions.</p>
+<div class="tier-section">
+  <div class="tier-image-container">
+  <%= image_tag "place.png", alt: "Grey Box Image" %>
+    <button class="tier-button">Growth</button>
+    <p class="tier-text">Start & Build</p>
   </div>
-  <div class="card">
-    <h2>Support & Resources</h2>
-    <p>Staying ahead with exclusive tools to empower your team and enhance delivery.</p>
-    <p style="padding-top:50px;">Through Shared Libraries and your Partners Portal, you'll access expert strategies, best practices, and technical resources to transform projects into high-impact products.</p>
+  <div class="tier-image-container">
+   <%= image_tag "place.png", alt: "Grey Box Image" %>
+    <button class="tier-button">Premium</button>
+    <p class="tier-text">Advance & Scale</p>
   </div>
-  <div class="card">
-    <h2>Revenue & Growth</h2>
-    <p>Earn and grow through our Royalty Tiers, designed to reward partners fairly as they progress.</p>
-    <p style="padding-top:20px;">As you advance gain access to exclusive tools, high-profile projects, scaling your success, with real-time earnings tracked. You stay in control of your growth every step of the way.</p>
+  <div class="tier-image-container">
+   <%= image_tag "place.png", alt: "Grey Box Image" %>
+    <button class="tier-button">Elite</button>
+    <p class="tier-text">Lead & Innovate</p>
   </div>
 </div>
+
 
 
 <div class="signup-section" style="padding-right:70px ;padding-top:100px; padding-bottom:150px;">
